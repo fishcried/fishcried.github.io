@@ -2,11 +2,11 @@
 layout: post
 title: "SaltStack(三)配置管理"
 description: ""
-category: 系统管理
+category: Linux系统管理
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [saltstack,配置管理]
+tags: [saltstack,配置管理,devops]
 ---
 
 # 1. 如何做到配置管理

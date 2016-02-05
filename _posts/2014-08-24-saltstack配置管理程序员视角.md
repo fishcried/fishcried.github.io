@@ -2,11 +2,11 @@
 layout: post
 title: "SaltStack(四)之配置管理程序员视角"
 description: ""
-category: 系统管理
+category: Linux系统管理
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [saltstack,配置管理]
+tags: [saltstack,配置管理,devops]
 ---
 
 搞定了当前需求并不是终点,匆匆茫茫出来的往往是半成品,努努力就可能做的更好.毕竟你我不是linus那类的天才.而且当看到一份sls文件,各种高级的魔法固然让人印象深刻,但如果没有可读性,可移植性只有奇葩愿意费力去啃.本文记录下个人使用salt的一点经验.

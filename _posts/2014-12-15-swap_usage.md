@@ -6,7 +6,7 @@ category: 性能调优
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [内存管理,性能调优]
+tags: [内存管理,性能调优,swap]
 ---
 
 >　对于swap的原则，个人比较极端。如果考虑性能，那么就不要用。如果有问题就早点发生，早点解决。

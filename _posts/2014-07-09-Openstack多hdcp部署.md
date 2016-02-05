@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "OpenStack multi dhcp agent"
+title: "OpenStack Neutron Dhcp-agent的高可用"
 description: ""
-category: 云计算
+category: openstack
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [openstack,neutron]
+tags: [openstack,neutron,dhcp]
 ---
 
 OpenStack中创建虚机时，由于dhcp获取ip失败的情况比较常见，尤其是批量操作。所以对dhcp做HA非常必要。

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "debug openstack by stachtach"
+title: "使用stacktach调试OpenStack"
+subtitle: "通过web查看openstack的rpc消息"
 description: ""
-category: 云计算
-subtitle:
+category: openstack
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [openstack]
+tags: [openstack,stacktach]
 ---
 
 # 1. StackTach 是什么

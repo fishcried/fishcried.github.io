@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "OpenStack Hacker养成指南"
+title: "OpenStack Hacker养成指南(转载)"
 description: ""
-category: 云计算
+category: OpenStack
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"

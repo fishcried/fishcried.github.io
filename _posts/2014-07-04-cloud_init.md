@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "OpenStack Cloud Init"
-description: ""
-category: 云计算
 subtitle:
+description: ""
+category: OpenStack
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [openstack]
+tags: [openstack,cloudinit]
 ---
 
 More info:"http://cloudinit.readthedocs.org/en/latest/"

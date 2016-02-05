@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "linux commands tips: sudo"
+title: "Linux sudo使用技巧"
+subtitle: "经常用，却很难熟悉"
 description: ""
-category: 系统管理
-subtitle:
+category: Linux系统管理
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [命令行使用]
+tags: [命令行,sudo]
 ---
 
 linux系统中,如果把各个用户与官位对应起来,那么root是至高无上的皇帝.大部分用户为平民.sudo命令能够让平民具有高级权限.sudo的核心就是适当放权,避免root事事亲为.

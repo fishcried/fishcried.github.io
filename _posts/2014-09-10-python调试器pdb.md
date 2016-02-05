@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "python调试器[i]pdb"
+title: "Python调试器pdb/ipdb"
 description: ""
 category: 程序设计
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [调试,python]
+tags: [调试,python,pdb]
 ---
 
 > The module pdb defines an interactive source code debugger for Python programs. It supports setting (conditional) breakpoints and single stepping at the source line level, inspection of stack frames, source code listing, and evaluation of arbitrary Python code in the context of any stack frame. It also supports post-mortem debugging and can be called under program control.

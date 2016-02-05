@@ -3,7 +3,7 @@ layout: post
 title: "GDB使用思维导图"
 subtitle: "gdb使用简单总结"
 description:
-category: 程序设计
+category: 工具链
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
 tags:

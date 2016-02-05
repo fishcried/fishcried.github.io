@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "linux commands tips: grep"
+title: "Grep命令使用技巧"
 description: ""
 category: 系统管理
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [命令行使用]
+tags: [命令行技巧,grep]
 ---
 
 阅读完全文需要一点耐心,只希望能提供一点参考价值.

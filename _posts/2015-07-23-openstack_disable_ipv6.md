@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OpenStack disable ipv6"
+title: "OpenStack禁用ipv6"
 description: ""
 category: 云计算
 subtitle:

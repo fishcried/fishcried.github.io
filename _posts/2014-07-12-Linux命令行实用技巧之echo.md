@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "linux commands tips: echo"
-category: 系统管理
-tags: [命令行使用]
+title: "Linux Echo命令使用总结"
+category: Linux系统管理
+tags: [linux,echo]
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"

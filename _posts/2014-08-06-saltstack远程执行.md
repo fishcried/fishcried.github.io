@@ -2,11 +2,11 @@
 layout: post
 title: "SaltStack(二)远程执行"
 description: ""
-category: 系统管理
+category: Linux系统管理
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [saltstack,配置管理]
+tags: [saltstack,配置管理,devops]
 ---
 
 # 1. 远程执行的基本需求

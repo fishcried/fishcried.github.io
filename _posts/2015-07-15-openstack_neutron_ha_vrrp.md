@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Neutorn通过VRRP实现l3的HA"
+title: "Neutorn通过VRRP实现L3-Agent的高可用"
 description: ""
-category: 云计算
+category: OpenStack
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [openstack, neutron, vrrp]
+tags: [openstack, neutron, vrrp,l3-agent]
 ---
 
 L3 agent是Neutron网络中南北东西流量的必经之地,所以L3 agent可靠性在生产环境中至关重要.

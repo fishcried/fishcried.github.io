@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "OpenStack DHCP性能优化"
-title: "OpenStack DHCP性能优化"
+title: "OpenStack DHCP性能优化(转载)"
 description: ""
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-category: 云计算
+category: OpenStack
 tags: [openstack,dhcp,neutron]
 ---
 

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Debug OpenStack by ELK"
+title: "使用ELK调试OpenStack"
 description: ""
 category: 云计算
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [openstack]
+tags: [openstack,elk]
 ---
 
 > 本文简单阐述ELK使用思路，不涉及ELK搭建. 但是会提供基于Liberty版本的shipper配置以及kibana的dashboards. 

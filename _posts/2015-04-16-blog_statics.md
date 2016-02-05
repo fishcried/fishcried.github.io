@@ -6,7 +6,7 @@ category: 个人笔记
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [个人笔记]
+tags: [博客]
 ---
 
 最近两个月基本没有怎么发布文章,心里突然有点不踏实.回首一看,发现自己的知识系统已经建立了10个月,便做个统计,对自己也是一次汇报.

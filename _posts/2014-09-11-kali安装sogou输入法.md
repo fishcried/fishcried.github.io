@@ -2,11 +2,11 @@
 layout: post
 title: "Kali安装sogou输入法"
 description: ""
-category: 个人笔记
+category: Linux系统管理
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [issue]
+tags: [问题解决,输入法,sogou,kali]
 ---
 
 linux下，输入法使用是个心病．搜狗出了个linux的版本,最近有时间正好折腾下．因为使用的是kali，官方不支持，只能手动来．简单记录．

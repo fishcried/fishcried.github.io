@@ -6,7 +6,7 @@ category: 系统管理
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [系统管理]
+tags: [系统管理,crontab]
 ---
 
 linux有个定期执行的服务cron,是一个非常听话的秘书．cron由crond服务与crontab命令组成．cron服务是可以根据

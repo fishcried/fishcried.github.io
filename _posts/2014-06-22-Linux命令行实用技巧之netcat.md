@@ -1,15 +1,16 @@
 ---
 layout: post
-title: "Netcat/nc命令使用技巧"
-subtitle:
+title: "Netcat/Nc命令使用技巧"
+subtitle: "耍耍网络的瑞士军刀"
 description: ""
-category: 玩转linux
+category: Linux系统管理
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
 tags:
     - nc
     - netcat
     - 网络
+    - linux
 ---
 
 netcat网络安全界的“瑞士军刀”，简单实用。可以用来扫描端口，指纹探查，聊天，传输文件，后门等等，常常会有你意想不到的使用方式。

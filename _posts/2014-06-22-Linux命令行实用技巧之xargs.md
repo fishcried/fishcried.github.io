@@ -2,7 +2,7 @@
 layout: post
 title: "xargs命令使用技巧"
 description: ""
-category: 系统管理
+category: Linux系统管理
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"

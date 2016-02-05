@@ -2,11 +2,11 @@
 layout: post
 title: "SaltStack(一)试水"
 description: ""
-category: 系统管理
+category: Linux系统管理
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
-tags: [saltstack,配置管理]
+tags: [saltstack,devops,配置管理]
 ---
 
 # 1. What is SaltStack?
