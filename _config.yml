@@ -13,8 +13,9 @@ RSS: true
 github_username:    fishcried
 
 # Build settings
+root: /
 highlighter: pygments
-permalink: pretty
+permalink: /:year-:month-:day/:title/
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 anchorjs: true
