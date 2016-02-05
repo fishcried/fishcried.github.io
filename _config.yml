@@ -1,0 +1,51 @@
+# Site settings
+title: Fishcried
+SEOTitle: 枯鱼的博客 | Fishcried
+header-img: img/bg/home-bg.jpg
+email: fishcried@163.com
+description: "OpenStack&Linux&网络安全"
+keyword: "fishcried,枯鱼,云计算,网络安全,博客"
+url: "http://fishcried.com"
+baseurl: ""
+
+# SNS settings
+RSS: true
+github_username:    fishcried
+
+# Build settings
+highlighter: pygments
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true
+
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+go_track_id: UA-54797523-1
+ga_domain: fishcried.com
+
+# Disqus settings
+disqus_username: fishcried
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "留点道德,坚持原则"
+sidebar-avatar: /img/bg/logo-fishcried.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Friends
+friends: [
+    {
+        title: "Fishcried' Blog",
+        href: "http://www.fishcried.com"
+    }
+]
