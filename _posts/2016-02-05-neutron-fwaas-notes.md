@@ -5,7 +5,7 @@ description: ""
 category: 云计算
 subtitle:
 author: "fishcried"
-header-img: "img/bg/home-bg.jpg"
+header-img: "img/neutron-fwaas-bg.jpg"
 tags: [openstack,neutron,fwaas,防火墙]
 ---
 

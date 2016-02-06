@@ -5,7 +5,7 @@ subtitle: "改变Flavor方式的冷迁移"
 description: ""
 category: openstack
 author: "fishcried"
-header-img: "img/bg/home-bg.jpg"
+header-img: "img/bg/nova-resize-bg.jpg"
 tags: [openstack,nova,resize]
 ---
 
