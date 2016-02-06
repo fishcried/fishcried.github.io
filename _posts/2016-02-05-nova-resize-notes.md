@@ -67,12 +67,12 @@ dest host准备工作做好后,会通过rpc的方式告诉src host开始进行re
 
 Nova Resize功能主要配置有两点.
 
-1. 本地迁移
+1. 本地迁移.
 2. compute node间nova用户免密码登陆.
 
 **本地迁移**
 
-如果要开启本地迁移，也就是resize的虚拟机还在原来的compute node上，则需要将nova.conf中启用allow_resize_to_same_host=True.nova-scheduler阶段与compute节点都需要配置.
+如果要开启本地迁移，也就是resize的虚拟机还在原来的compute node上，则需要将nova.conf中启用allow_resize_to_same_host=True.nova-scheduler节点与compute节点都需要配置.
 
 **Compute Node间nova用户免密码登陆**
 
@@ -136,4 +136,4 @@ Nova Resize功能主要配置有两点.
 
     # 测试联通性
 
-    ssh compute-1
+    ssh compute-node-1
