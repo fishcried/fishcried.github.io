@@ -47,7 +47,7 @@ openstack系统出现问题时定位起来很麻烦，多节点，多服务，�
 
 有什么比图像还能提供更多的信息那？
 
-![](/img/vsz-ips-bomb-by-paths.png)
+![](/img/vsz-ops-bomb-by-paths.png)
 
 这里我只是通过上面的一个visualize来展示可视化定位思路.下面是该图含义:
 
