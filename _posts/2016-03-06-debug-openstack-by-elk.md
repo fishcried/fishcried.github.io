@@ -10,8 +10,8 @@ tags: [openstack,elk]
 ---
 
 
-> 之前简单的阐述过试用ELK调试OpenStack的思路,今天在"[沈阳云计算大数据meetup](http://mp.weixin.qq.com/s?__biz=MzA5ODU1ODIwOA==&mid=535930856&idx=1&sn=982f4fda81f5e677e8b84b60d5792b2b&scene=0#wechat_redirect)"上详细的分享了相关主题，这里对之前的blog进行重写。
-> 之所以使用ELK分析OpenStack日志，主要是OpenStack环境下的问题定位查看日志是最有效的方式，而ELK成为目前日志分析的标配，自然而然的就行了尝试与实践. 这里是[PPT](http://pan.baidu.com/s/1jHkEtd8)下载地址.
+> 之前简单的阐述过使用ELK调试OpenStack的思路,今天在"[沈阳云计算大数据meetup](http://mp.weixin.qq.com/s?__biz=MzA5ODU1ODIwOA==&mid=535930856&idx=1&sn=982f4fda81f5e677e8b84b60d5792b2b&scene=0#wechat_redirect)"上详细的分享了该主题，这里对之前的blog进行重写。
+> 之所以使用ELK分析OpenStack日志，主要是OpenStack环境下的问题定位时查看日志是最有效的方式，而ELK成为目前日志分析的标配，自然而然的就行了尝试与实践. 这里是[PPT](http://pan.baidu.com/s/1jHkEtd8)下载地址.
 >
 > ps: 如果沈阳的朋友有好的议题欢迎来分享 ;-)
 
