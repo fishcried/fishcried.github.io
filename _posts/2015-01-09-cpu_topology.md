@@ -20,22 +20,22 @@ tags: [cpu,性能调优]
 ![socket&core&thread](/img/mc_support.gif)
 
 - Sockets
-    可以理解成主板上cpu的插槽数.物理cpu的颗数.一般同一socket上的core共享二级缓存.
+    可以理解成主板上cpu的插槽数.物理cpu的颗数.一般同一socket上的core共享三级缓存.
 - Cores
-    常说的核,核有独立的物理资源.比如单独的一级缓存什么的.
+    常说的核,核有独立的物理资源.比如单独的一级二级缓存什么的.
 - Threads
-    我理解成独立逻辑cpu了.如果不开超线程,threads应该与cores相等,如果开了超线程,threads应该是cores的倍数.相互之间共享物理资源.
+    我理解成逻辑cpu了.如果不开超线程,threads应该与cores相等,如果开了超线程,threads应该是cores的倍数.相互之间共享物理资源.
 - Nodes 上图中没有提及
     Node是NUMA体系中的概念．由于SMP体系中各个CPU访问内存只能通过单一的通道．导致内存访问成为瓶颈,cpu再多也无用．后来引入了NUMA．通过划分node,每个node有本地RAM,这样node内访问RAM速度会非常快．但跨Node的RAM访问代价会相对高一点.可以看下面的示意图.
 
 ![SMP vs NUMA](/img/smp_vs_numa.png)
 
-由此可以总结这样的逻辑关系:**`Node > Socket > Core > Thread`**.
+由此可以总结这样的逻辑关系(包含):**`Node > Socket > Core > Thread`**.
 区分这几个概念为了了解cache的分布,因为cpu绑定的目的就是提高cache的命中率,降低cpu颠簸.所以了解cache与cpu之间的mapping关系是非常重要的.通常来讲:
 
 2. 同Socket内的cpu共享三级级缓存.
 3. 每个Core有自己独立的二级缓存.
-4. 一个Core上超频出来的Threads,避免绑定，看似可能会提高L2 cache命中率,但也可能有严重的cpu争抢，导致性能非常差.
+4. 一个Core上超线程出来的Threads,避免绑定，看似可能会提高L2 cache命中率,但也可能有严重的cpu争抢，导致性能非常差.
 
 # 查看CPU信息
 
@@ -65,7 +65,7 @@ tags: [cpu,性能调优]
     NUMA node0 CPU(s):     0-7,16-23
     NUMA node1 CPU(s):     8-15,24-31 
 
-看到了么,2颗8核2线程,一共是32processor.也可以看到是numa体系.可以使用一下命令详细查看numa信息.非NUMA体系时,所有cpu都划分为一个Node.
+看到了么,2颗8核双线程,一共是32 processors.也可以看到是numa体系.可以使用一下命令详细查看numa信息.非NUMA体系时,所有cpu都划分为一个Node.
 
     root@ncloud-config:~# numactl --hardware
     available: 2 nodes (0-1)
@@ -81,9 +81,9 @@ tags: [cpu,性能调优]
       1:  20  10
 
 
-两个Node,每个Node内不RAM为64G.注意,Node内的cpu id不连续哦！
+两个Node,每个Node内RAM为64G.注意,Node内的cpu id不连续哦！
 
-## 装X的方式(by proc & sys)
+## 装X的方式(通过proc & sys的手动获取)
 
     # 获取cpu名称与主频
     cat /proc/cpuinfo | grep 'model name'  | cut -f2 -d: | head -n1 | sed 's/^ //'
@@ -124,7 +124,7 @@ tags: [cpu,性能调优]
 **Numa分组信息**
 
 - 通过图可以看到cpu为numa架构,且有两个node.
-- 将同一socket内的cpu(threads)都划分在一个node中.通过上图也解释了node中cpu序列不连续的问题.因为同一个Core上的两个Threads是超频出来的.超频Thread的cpu id在原有的core id基础上增长的
+- 将同一socket内的cpu(threads)都划分在一个node中.通过上图也解释了node中cpu序列不连续的问题.因为同一个Core上的两个Threads是超线程出来的.超线程Thread的cpu id在原有的core id基础上增长的
 - 每个node中有64507MB的本地RAM可用.
 
 **cache信息**
@@ -150,7 +150,8 @@ tags: [cpu,性能调优]
 
 |Why | Who | When |
 |----|-----|------|
-|Create|fishcired|2014-07-28 |
+|创建|fishcired|2014-07-28 |
 |添加cpu topology图|fishcired|2015-01-04 |
 |整理发布|fishcired|2015-01-09 |
 |修正错别字|fishcired|2015-01-14 |
+|修正错别字|fishcired|2016-03-28 |
