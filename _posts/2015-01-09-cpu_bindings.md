@@ -32,7 +32,7 @@ tags: [cpu,openstack,性能调优]
 
 **永久生效需要在grub中修改kernel的启动参数.**
 
-# **使用`tasket`设置进程亲和性**
+# **使用`taskset`设置进程亲和性**
 
 `tasket`使用非常简单,能够实时的进行cpu亲和性设置.
 
@@ -92,8 +92,8 @@ J版的时候社区完善了功能,可以针对numa特性来进行绑定了.在n
 
     glance image-update image_id –property hw_numa_mempolicy=strict –property hw_numa_cpus.0=0,1,2,3 –property hw_numa_cpus.1=4,5,6,7 –property hw_numa_mem.0=1 –property hw_numa_mem.1=1 --property hw_cpu_policy=decicated --property hw_cpu_threads_policy=separate
 
-> 上面的例子中,cpu的绑定hw:cpu_threads_policy参数其实是不起作用的，到M版代码中也没有相关实现.如果cpu_policy=decicated时,如果host开启超线程,相关vcpu会绑定在同一个core的threads上
-> **Be careful!** 官方文档有的时候很坑......
+> 上面的例子中,cpu的绑定hw:cpu_threads_policy参数其实是不起作用的，到M版代码中也没有相关实现.如果cpu_policy=decicated时,host开启超线程,相关vcpu会绑定在同一个core的threads上，
+> 这样的绑定方式会导致vm性能很差, **Be careful!** 官方文档有的时候很坑......
 
 # 参考文档
 
