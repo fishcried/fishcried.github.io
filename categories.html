@@ -28,15 +28,20 @@ header-img: "img/bg/tag-bg.jpg"
 				<a href="#{{ category[0] }}" title="{{ category[0] }}" rel="{{ category[1].size }}">{{ category[0] }}</a>
 				{% endfor %}
 			</div>
+			<div class="one-tag-list">
+			  	<span class="fa fa-tag listing-seperator" id="{{ category[0] }}">
+                    <span class="tag-text">{{ category[0] }}</span>
+                </span>
 				
-			{% for category in site.categories %}
-			<h3>{{ category | first }} ({{ category | last | size }})</h3>
-			<ul class="arc-list">
-				{% for post in category.last %}
-				<li><span>{{ post.date | date: "%F" }}</span> &raquo; <a href=" post.url | prepend: site.baseurl }}"">{{ post.title }}</a></li>
+				{% for category in site.categories %}
+				<h3>{{ category | first }}</h3>
+				<ul class="arc-list">
+					{% for post in category.last %}
+					<li><span>{{ post.date | date: "%F" }}</span> &raquo; <a href=" post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+					{% endfor %}
+				</ul>
 				{% endfor %}
-			</ul>
-			{% endfor %}
+			</div>
 		</div>
 	</div>
 </div>
