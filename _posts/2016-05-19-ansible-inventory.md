@@ -4,6 +4,7 @@ title: "Ansible(二) 主机管理"
 description: ""
 category: Linux系统管理
 author: "fishcried"
+series: "SaltStack & Ansile"
 header-img: "img/bg/home-bg.jpg"
 tags: [ansible,devops,配置管理]
 ---
