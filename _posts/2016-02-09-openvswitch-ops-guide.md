@@ -3,7 +3,7 @@ layout: post
 title: "OpenStack网络基础知识: OpenvSwitch使用指南"
 subtitle: "OVS常用操作总结"
 description: "对openvswitch日常使用的一次系统总结."
-category: Openstack
+category: OpenStack
 author: "fishcried"
 header-img: "img/openvswitch-ops-guide-bg.jpg"
 tags: [neutron,openvswitch,ovs,openstack,sdn]

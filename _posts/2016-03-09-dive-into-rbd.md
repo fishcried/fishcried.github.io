@@ -2,7 +2,7 @@
 layout: post
 title: "本地修改OpenStack虚机RBD块"
 description: ""
-category: 云计算
+category: OpenStack
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
 tags: [openstack,ceph,rbd]

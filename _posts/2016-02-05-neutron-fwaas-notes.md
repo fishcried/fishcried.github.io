@@ -2,7 +2,7 @@
 layout: post
 title: "Neutron防火墙(FWaas)"
 description: ""
-category: 云计算
+category: OpenStack
 subtitle:
 author: "fishcried"
 header-img: "img/neutron-fwaas-bg.jpg"

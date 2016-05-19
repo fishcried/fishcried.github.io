@@ -3,7 +3,7 @@ layout: post
 title: "使用stacktach调试OpenStack"
 subtitle: "通过web查看openstack的rpc消息"
 description: ""
-category: openstack
+category: OpenStack
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
 tags: [openstack,stacktach]

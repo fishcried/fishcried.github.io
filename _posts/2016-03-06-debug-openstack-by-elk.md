@@ -3,7 +3,7 @@ layout: post
 title: "使用ELK调试OpenStack"
 subtitle: "沈阳云计算大数据Meetup第一期Topic之一"
 description: ""
-category: 云计算
+category: OpenStack
 author: "fishcried"
 header-img: "img/openstack-elk-bg.png"
 tags: [openstack,elk]

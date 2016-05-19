@@ -2,7 +2,7 @@
 layout: post
 title: "OpenStack消息队列学习(一): AMQP基本概念"
 description: ""
-category: 云计算
+category: OpenStack
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"

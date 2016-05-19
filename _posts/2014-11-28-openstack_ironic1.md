@@ -2,7 +2,7 @@
 layout: post
 title: "OpenStack Juno版本ironic服务原理篇"
 description: ""
-category: 云计算
+category: OpenStack
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"

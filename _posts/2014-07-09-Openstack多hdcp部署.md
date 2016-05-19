@@ -2,7 +2,7 @@
 layout: post
 title: "OpenStack Neutron Dhcp-agent的高可用"
 description: ""
-category: openstack
+category: OpenStack
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
