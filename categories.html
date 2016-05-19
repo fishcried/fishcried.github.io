@@ -23,11 +23,17 @@ header-img: "img/bg/tag-bg.jpg"
 <div class="container">
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<div id='tag_cloud' class="tags">
+				{% for category in site.categories %}
+				<a href="#{{ category[0] }}" title="{{ category[0] }}" rel="{{ category[1].size }}">{{ category[0] }}</a>
+				{% endfor %}
+			</div>
+				
 			{% for category in site.categories %}
 			<h3>{{ category | first }} ({{ category | last | size }})</h3>
 			<ul class="arc-list">
 				{% for post in category.last %}
-				<li><span>{{ post.date | date: "%F" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+				<li><span>{{ post.date | date: "%F" }}</span> &raquo; <a href=" post.url | prepend: site.baseurl }}"">{{ post.title }}</a></li>
 				{% endfor %}
 			</ul>
 			{% endfor %}
