@@ -2,7 +2,7 @@
 layout: post
 title: "SaltStack(二)远程执行"
 description: ""
-category: Linux系统管理
+category: 配置管理
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"

@@ -2,7 +2,7 @@
 layout: post
 title: "SaltStack(四)之配置管理程序员视角"
 description: ""
-category: Linux系统管理
+category: 配置管理
 subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"

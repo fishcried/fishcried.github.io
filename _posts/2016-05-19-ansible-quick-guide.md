@@ -2,7 +2,7 @@
 layout: post
 title: "Ansible(一) Try it"
 description: ""
-category: Linux系统管理
+category: 配置管理
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
 tags: [ansible,devops,配置管理]
