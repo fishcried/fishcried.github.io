@@ -32,12 +32,11 @@ header-img: "img/bg/tag-bg.jpg"
 			  	<span class="fa fa-tag listing-seperator" id="{{ category[0] }}">
                     <span class="tag-text">{{ category[0] }}</span>
                 </span>
-				
 				{% for category in site.categories %}
 				<h3>{{ category | first }}</h3>
 				<ul class="arc-list">
 					{% for post in category.last %}
-					<li><span>{{ post.date | date: "%F" }}</span> &raquo; <a href=" post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+					<li><span>{{ post.date | date: "%F" }}</span> &raquo; <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
 					{% endfor %}
 				</ul>
 				{% endfor %}
