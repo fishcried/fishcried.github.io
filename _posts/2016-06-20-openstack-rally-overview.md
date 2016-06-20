@@ -49,11 +49,11 @@ tags:
 
 上图主要是说Rally部署时可以有两种模式:
 
-1. 最为App部署，其实就是个CLI
+1. 作为App部署，其实就是个CLI
 2. 作为Service部署，这样整个团队可以使用。这种要是直接有个web UI就好了。
 
 
-> service模式只是个愿景: https://answers.launchpad.net/rally/+question/253017
+> service模式只是个愿景: 见提问[如何以service的形式部署rally](https://answers.launchpad.net/rally/+question/253017)
 
 
 ## Rally安装试用
@@ -73,7 +73,7 @@ tags:
 # 第一次使用时需要重建数据库
 # docker_rally
 root@5716a367e606:~# rally-manage db recreate   
- ```
+```
  
 > 上面的chown步骤非常重要，否则会出现权限问题. 
 
@@ -82,6 +82,7 @@ root@5716a367e606:~# rally-manage db recreate
 将已经存在的openstack添加到rally中，可以参照下面的json文件修改。我预先建立了rally的测试用户，这样能隔离开测试数据。
 
 **定义环境文件**
+
 ```
 $ cat existing.json
 {
@@ -129,7 +130,7 @@ $ cat existing.json
 
 
 ```
-# cat task1.yaml 
+# cat task1.yaml
 ---
 # Authenticate
 Authenticate.validate_nova:
@@ -139,9 +140,8 @@ Authenticate.validate_nova:
       type: "constant"
       times: 100
       concurrency: 2
-      
-      
 ```
+
 ```
 # rally task start task1.yaml 
 --------------------------------------------------------------------------------
@@ -171,6 +171,7 @@ Task syntax is correct :)
 ```
 
 **查看结果**
+
 ```
 rally task report --out=report1.html --open
 
