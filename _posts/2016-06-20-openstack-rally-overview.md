@@ -224,8 +224,9 @@ NovaSecGroup.boot_and_delete_server_with_secgroups:
 **模板与传参**
 
 任务文件中可以使用jinjia2语法,自然就可以使用变量了.
+
 ```
-{% set image_name = image_name or "^cirros.*uec$" %}
+\{\% set image_name = image_name or "^cirros.*uec$" \%\}
   NovaServers.boot_and_delete_server:
     -
       args:
@@ -243,7 +244,9 @@ NovaSecGroup.boot_and_delete_server_with_secgroups:
           users_per_tenant: 1
     ...
 ```
+
 启动任务时传参
+
 ```
 rally task start task.yaml --task-args 'image_name: "^cirros.*uec$"'
 ```
