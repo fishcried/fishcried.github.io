@@ -20,7 +20,7 @@ tags:
 > 使用已经建立的用户能够隔离测试环境.主要是在环境配置时指定users,然后在task的context中去除user信息.
 
  
- ```
+```
 $ cat existing.json
 {
     "type": "ExistingCloud",
@@ -53,6 +53,7 @@ $ cat existing.json
 **rally对OpenStack环境进行功能验证**
 
 1. rally整个tempest来做功能验证非常方便了，需要注意的是在安装时可以通过--source指定维护的tempest用例分支.如果都是跟着官方的肯定会有很多用例不过的.
+
 ```
 $ rally verify install
 $ rally verify install --deployment <UUID or name of a deployment>
@@ -62,6 +63,7 @@ $ rally verify install --source /home/ubuntu/tempest/ --version 198e5b4b871c3d09
 $ rally verify install --source /home/ubuntu/tempest/ --version 10.0.0
 $ rally verify install --source /home/ubuntu/tempest/ --version 10.0.0 --system-wide
 ```
+
 2. 整理所有集成的task场景到一个文件中，将task的timers设置为1，这样也可以做到功能验证的目的.
 
 > 上面两种方式，前者在于测试的精度非常细，是api级别(单元测试),而且控制粒度也比较细，冒烟测试,特定项目(通过--set来指定)测试等.
