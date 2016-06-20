@@ -224,7 +224,7 @@ NovaSecGroup.boot_and_delete_server_with_secgroups:
 
 **模板与传参**
 
-任务文件中可以使用jinjia2语法,自然就可以使用变量了.
+任务文件中可以使用jinjia2语法,自然就可以使用变量了.下面是不应该有`\`, 下面是为了博客生成顺利.
 
 ```
 \{\% set image_name = image_name or "^cirros.*uec$" \%\}
