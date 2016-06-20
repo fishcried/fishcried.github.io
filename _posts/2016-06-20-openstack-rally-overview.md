@@ -213,12 +213,13 @@ NovaSecGroup.boot_and_delete_server_with_secgroups:
 ```
 
 > 多个用例可以写在同一个文件中，这样生成报表的时候比较方便.语法如下：
-> ```
-> {
->    "<ScenarioName1>": [<benchmark_config>, <benchmark_config2>, ...]
->    "<ScenarioName2>": [<benchmark_config>, ...]
-> }
-> ```
+
+```
+{
+   "<ScenarioName1>": [<benchmark_config>, <benchmark_config2>, ...]
+   "<ScenarioName2>": [<benchmark_config>, ...]
+}
+```
 
 **模板与传参**
 
