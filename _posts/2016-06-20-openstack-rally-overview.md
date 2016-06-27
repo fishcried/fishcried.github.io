@@ -257,3 +257,28 @@ rally task start task.yaml --task-args 'image_name: "^cirros.*uec$"'
 rally cli使用起来非常的简单,主要有`task`,`deploymnet`,`verify`几个子命令,每个命令提供了非常多的参数,所以多用help命令查看参数信息.
 
 你所需要的，基本都被想到了，参数都是现成的.
+
+## 解决Rally报告提示Failed to load AngularJS framework
+
+rally测试结果可以生成html报告.但是原生态的Rally报告模板angular js框架是从Google下载的.  rally/src/rally/ui/templates/task/report.mako文件中,
+
+```
+<%block name="libs">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.js"></script>
+</%block>
+```
+
+解决方法.  修改rally/src/rally/ui/templates/task/report.mako文件中:
+
+```
+<%block name="libs">
+  <link rel="stylesheet" href="http://cdn.bootcss.com/nvd3/1.1.15-beta/nv.d3.css">
+  <script type="text/javascript" src="http://cdn.bootcss.com/angular.js/1.3.3/angular.min.js"></script>
+  <script type="text/javascript" src="http://cdn.bootcss.com/d3/3.4.13/d3.min.js"></script>
+  <script type="text/javascript" src="http://cdn.bootcss.com/nvd3/1.1.15-beta/nv.d3.min.js"></script>
+</%block>
+```
+
