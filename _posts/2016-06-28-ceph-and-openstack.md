@@ -8,8 +8,7 @@ author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
 tags:
     - openstack
-    - mysql
-    - 高可用
+    - ceph
 ---
 
 # Ceph与OpenStack集成配置
