@@ -14,8 +14,7 @@ tags:
 
 # 搭建Mysql高可用集群(MariaDB Galera Cluster)
 
-
-对Mysql并不熟，但是OpenStack中使用mysql肯定要保证高可用，参照者OpenStack官方HA文档和一些资料整理MariaDB Galera Cluster搭建过程，省着忘了。一下就是实验的物理机器:
+对Mysql并不熟，但是OpenStack中使用mysql肯定要保证高可用，参照着OpenStack官方HA文档和一些资料整理MariaDB Galera Cluster搭建过程，省着忘了。以下就是实验的物理机器:
 
 | hostname | ip | 用途 |
 |---------------|-----|---|
@@ -73,6 +72,7 @@ ubuntu@liberty-1:~$ sudo apt-get install rsync
 - 4444: Galera Cluster uses TCP for all other State Snapshot Transfer methods.
 
 下面配置中NODE-IP-ADDRESS自行替换
+
 ```
 # iptables --append INPUT --in-interface eth0 \
    --protocol tcp --match tcp --dport 3306 \
@@ -99,6 +99,7 @@ ubuntu@liberty-1:~$ sudo apt-get install rsync
 ### 配置数据库
 
 **/etc/mysql/conf.d/cluster.cnf配置**
+
 ```
 cat /etc/mysql/conf.d/cluster.cnf
 [mysqld]
