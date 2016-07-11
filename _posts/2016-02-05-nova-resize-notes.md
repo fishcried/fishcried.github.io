@@ -67,73 +67,75 @@ dest host准备工作做好后,会通过rpc的方式告诉src host开始进行re
 
 Nova Resize功能主要配置有两点.
 
-1. 本地迁移.
+1. 是否允许本地迁移.
 2. compute node间nova用户免密码登陆.
 
 **本地迁移**
 
-如果要开启本地迁移，也就是resize的虚拟机还在原来的compute node上，则需要将nova.conf中启用allow_resize_to_same_host=True.nova-scheduler节点与compute节点都需要配置.
+如果要开启本地迁移，也就是resize的虚拟机还在原来的compute node上，则需要将nova.conf中启用`allow_resize_to_same_host=True`. nova-scheduler节点与compute节点都需要配置.
 
 **Compute Node间nova用户免密码登陆**
 
-    # 准备秘钥
-    mkdir ssh
-    $ ssh-keygen -t rsa
-    Generating public/private rsa key pair.
-    Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa): ssh/id_rsa
-    Enter passphrase (empty for no passphrase):
-    Enter same passphrase again:
-    Your identification has been saved in ssh/id_rsa.
-    Your public key has been saved in ssh/id_rsa.pub.
-    The key fingerprint is:
-    15:a8:43:8b:23:3a:73:77:db:36:65:18:cf:d0:22:55 ubuntu@fishcried-horse
-    The key's randomart image is:
-    +--[ RSA 2048]----+
-    |         oE      |
-    |      . o  .     |
-    |     o + ..      |
-    |  . o = +..      |
-    | . . . oSB       |
-    |+ . . . . =      |
-    | + . . o o       |
-    |      . +        |
-    |       . .       |
-    +-----------------+
+ssh免密码登陆，一搜大把的文章，这里记录主要步骤:
 
+1. 生成私钥和公钥, 不要带密码
+2. 将公钥加入到authorized_keys文件中,注意是追加.
+3. 修改私钥和authorized_keys文件权限为600
+4. 定制config文件
+4. 将以上几个文件同步到各个节点
 
-    ubuntu at fishcried-horse in ~/temp
+```
+# 生成密钥对
+mkdir .ssh
+$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa): ssh/id_rsa
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in ssh/id_rsa.
+Your public key has been saved in ssh/id_rsa.pub.
+The key fingerprint is:
+15:a8:43:8b:23:3a:73:77:db:36:65:18:cf:d0:22:55 ubuntu@fishcried-horse
+The key's randomart image is:
++--[ RSA 2048]----+
+|         oE      |
+|      . o  .     |
+|     o + ..      |
+|  . o = +..      |
+| . . . oSB       |
+|+ . . . . =      |
+| + . . o o       |
+|      . +        |
+|       . .       |
++-----------------+
 
+# 将公钥写入authorized_keys
 
-    ubuntu at fishcried-horse in ~/temp
-    $ tree
-    .
-    └── ssh
-        ├── authorized_keys
-        ├── config
-        ├── id_rsa
-        └── id_rsa.pub
+cat id_rsa.pub >> authorized_keys
+chmod 600 id_rsa authorized_keys
 
-
-    1 directory, 4 files
-
-
-    cat << EOF > ssh/config
-     Host * StrictHostKeyChecking no
+# 定制配置
+cat << EOF > ssh/config
+    # 第一次不用输入yes
+    Host * StrictHostKeyChecking no
+    # knowhosts为/dev/null
     UserKnownHostsFile=/dev/null
-    EOF
+    # 设置日志级别,省中总是warn
+    LogLevel ERROR
+EOF
 
+# 将秘钥与相关配置同步到每一个计算节点
+scp -r ssh root@compute-node:/var/lib/nova/.ssh
 
-    chmod 600
-    chmod 600 authorized_keys id_rsa
+# 登陆compute节点，调整nova用户
+ssh root@compute-node
+usermod -s /bin/bash nova
+chown -R nova:nova /var/lib/nova/.ssh
 
-    # 将秘钥与相关配置同步到每一个计算节点
-    scp -r ssh root@compute-node:/var/lib/nova/.ssh
+# 测试联通性
 
-    # 登陆compute节点，调整nova用户
-    ssh root@compute-node
-    usermod -s /bin/bash nova
-    chown -R nova:nova /var/lib/nova/.ssh
+ssh compute-node-1
 
-    # 测试联通性
+```
 
-    ssh compute-node-1
+>  上面配置中修改nova用户的shell非常重要，不要忘记.
