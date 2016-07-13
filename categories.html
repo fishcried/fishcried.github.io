@@ -40,7 +40,7 @@ header-img: "img/bg/tag-bg.jpg"
 			{% for category in site.categories %}
 			<div class="one-tag-list">
 			  	<span class="fa fa-tag listing-seperator" id="{{ category[0] }}">
-                    <span class="tag-text">{{ tag[0] }}</span>
+                    <span class="tag-text">{{ category[0] }}</span>
                 </span>
 				{% for post in category[1] %}
 				  <!-- <li class="listing-item">
