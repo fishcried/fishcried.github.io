@@ -25,7 +25,7 @@ kramdown:
   input: GFM                            # use Github Flavored Markdown !important
 
 
-go_track_id: UA-54797523-1
+ga_track_id: UA-54797523-1
 ga_domain: fishcried.com
 
 # Disqus settings
