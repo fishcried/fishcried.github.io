@@ -19,21 +19,37 @@ header-img: "img/bg/tag-bg.jpg"
     </div>
 </header>
 
+{% assign count = '0' %}
+{% assign idx = '0' %}
+{% for post in site.posts reversed %}
+	{% if post.series == page.series %}
+		{% capture count %}{{count | plus: '1'}}{% endcapture %}
+		{% post.url == page.url %}
+			{% capture idx %}{{count}}{% endcapture %}
+		{% endif %}
+{% endfor %}
+
 <!-- Main Content -->
 <div class="container">
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-		   {% for serial in site.data.serials %}
-		   		<h1> debug {{ serial.name }} </h1>
-				{% for post in site.posts %}
-					{% if post.serial %}
-					<h6> {{ post.seiral }} / {{post.title}} </h6>
-					{% endif %}
-					{% if post.serial = serial %}
-						<li><span>{{ post.date | date: "%F" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-					{% endif %}
+			<ul>
+			   {% assign count = '0' %}
+				{% for post in site.posts reversed %}
+					{% if post.series == page.series %}
+						{% capture count %}{{ count | plus: '1' }}{% endcapture %}
+						<li>部分{{count}} - 
+						{% if page.url == post.url %}
+							This Article
+						{% else %}
+							<a href="{{post.url}}">{{post.title}}</a>
+						{% endif %}
+						</li>
 				{% endfor %}
-		   {% endfor %}
+			</ul>
 		</div>
 	</div>
 </div>
+
+
+

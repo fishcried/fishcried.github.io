@@ -7,7 +7,7 @@ subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
 tags: [saltstack,devops,配置管理]
-serials: 配置管理
+series: 配置管理
 ---
 
 # 1. What is SaltStack?
