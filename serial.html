@@ -1,5 +1,5 @@
 ---
-title: Categories
+title: Serial
 layout: default
 description:
 header-img: "img/bg/tag-bg.jpg"
@@ -23,41 +23,14 @@ header-img: "img/bg/tag-bg.jpg"
 <div class="container">
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 标签云 -->
-			<div id='tag_cloud' class="tags">
-				{% for serial in site.serials%}
-				<a href="#{{ serial[0] }}" title="{{ serial[0] }}" rel="{{ serial[1].size }}">{{ serial[0] }}</a>
+		   {% set serials = ["配置管理"] %}
+		   {% for serial in serials %}
+				{% for post in site.posts %}
+					{% if post.serial = serial %}
+						<li><span>{{ post.date | date: "%F" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+					{% endif %}
 				{% endfor %}
-			</div>
-
-            <!--<blockquote class="tag-comments">
-                标签命名规范：
-                    <li>行业观察、职位、公司优先使用中文</li>
-                    <li>外国产品、术语优先使用英文</li>
-            </blockquote>-->
-
-            <!-- 标签列表 -->
-			{% for serial in site.serials %}
-			<div class="one-tag-list">
-			  	<span class="fa fa-tag listing-seperator" id="{{ serial[0] }}">
-                    <span class="tag-text">{{ serial[0] }}</span>
-                </span>
-				{% for post in serial[1] %}
-				  <!-- <li class="listing-item">
-				  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-				  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-				  </li> -->
-				 <div class="post-preview">
-				    <a href="{{ post.url | prepend: site.baseurl }}">
-				        <h2 class="post-title"> {{ post.title }} </h2>
-				    </a>
-				    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-				</div>
-				<hr>
-				{% endfor %}
-			</div>
-			{% endfor %}
-
+		   {% endfor %}
 		</div>
 	</div>
 </div>
