@@ -23,10 +23,12 @@ header-img: "img/bg/tag-bg.jpg"
 <div class="container">
 	<div class="row">
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-		   {% set serials = ["配置管理"] %}
-		   {% for serial in serials %}
-		   		<h1> debug {{ serial }} </h1>
+		   {% for serial in site.data.serials %}
+		   		<h1> debug {{ serial.name }} </h1>
 				{% for post in site.posts %}
+					{% if post.serial %}
+					<h6> {{ post.seiral }} / {{post.title}} </h6>
+					{% endif %}
 					{% if post.serial = serial %}
 						<li><span>{{ post.date | date: "%F" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
 					{% endif %}
