@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ansible(四) 编写Ansible Playbooks"
+title: "Ansible(四) 使用Ansible Playbooks"
 description: ""
 category: 配置管理
 subtitle:
@@ -10,7 +10,7 @@ tags: [ansible,devops,配置管理]
 series: 配置管理
 ---
 
-# Ansible(四) Ansible Playbooks
+# Ansible(四) 使用Ansible Playbooks
 
 前面已经提到ansible可以非常方便的控制多台机器,比如查看各台机器上的apache服务状态,`ansible all -a "service apache status" --sudo`,如果任务更复杂一点可以写成一个脚本，然后ansible会在每台机器上执行脚本。但是如果任务中子任务有有依赖那，任务判断任务的执行状态那，总之还是有一系列的问题，总结起来就是能不能做任务编排?当然能，如果没有任务编排就不能称之为配置管理工具，这个功能就叫playbook.
 
