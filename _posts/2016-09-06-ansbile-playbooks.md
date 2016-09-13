@@ -7,7 +7,6 @@ subtitle:
 author: "fishcried"
 header-img: "img/bg/home-bg.jpg"
 tags: [ansible,devops,配置管理]
-series: 配置管理
 ---
 
 # Ansible(四) 使用Ansible Playbooks
