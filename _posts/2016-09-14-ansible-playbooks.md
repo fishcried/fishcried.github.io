@@ -26,7 +26,7 @@ playbooks正如名字一样"剧本集"，通过剧本来讲述一个复杂的故
 
 下面是一个playbook例子.
 
-```yaml
+```
 - name: setup openstack compent
   hosts: all
   remote_user: root
@@ -74,6 +74,7 @@ key: value
 ```
 register: xxx
 ```
+
 - xxx.stdout.find(sdf)
 - xxx.stdout_lines
 
@@ -94,6 +95,7 @@ Ansible允许你使用Jinja2模板系统在playbook中引用变量.
 {{ my_variable|default('my_variable is not defined') }}
 
 ```
+
 - http://jinja.pocoo.org/docs/dev/templates/#builtin-filters
 - http://ju.outofmemory.cn/entry/97893
 
