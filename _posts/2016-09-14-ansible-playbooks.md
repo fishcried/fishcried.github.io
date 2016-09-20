@@ -114,12 +114,13 @@ ansible hostname -m setup
 
 **魔法变量**
 
-- hostvars允许你访问另一个主机的变量，当然前提是ansible已经收集到这个主机的变量了：
-- group_names：是当前主机所在的group列表
-- groups：是所有inventory的group列表
-- inventory_hostname：是在inventory里定义的主机名（ip或主机名称）
-- play_hosts是当前的playbook范围内的主机列表
-- inventory_dir和inventory_file是定义inventory的目录和文件
+- hostvars允许你访问另一个主机的变量，当然前提是ansible已经收集到这个主机的变量了
+- group_names:是当前主机所在的group列表
+- groups: 是所有inventory的group列表
+- `inventory_hostname`: 是在inventory里定义的主机名
+- `play_hosts`是当前的playbook范围内的主机列表
+- `inventory_dir`和`inventory_file`是定义inventory的目录和文件
+
 
 ```
 # 查看test.example.com主机的ansible版本
