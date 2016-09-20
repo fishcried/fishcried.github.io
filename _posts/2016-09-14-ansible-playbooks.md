@@ -121,24 +121,6 @@ ansible hostname -m setup
 - `play_hosts`是当前的playbook范围内的主机列表
 - `inventory_dir`和`inventory_file`是定义inventory的目录和文件
 
-
-```
-# 查看test.example.com主机的ansible版本
-{{ hostvars['test.example.com']['ansible_distribution'] }}
-# 判断当前主机是否属于webserver组内
-{% if 'webserver' in group_names %}
-   # some part of a configuration file that only applies to webservers
-{% endif %}
-# 遍历app_servers组主机
-% for host in groups['app_servers'] %}
-   # something that applies to all app servers.
-{% endfor %}
-#  查看该组主机ip
-{% for host in groups['app_servers'] %}
-   {{ hostvars[host]['ansible_eth0']['ipv4']['address'] }}
-{% endfor %}
-```
-
 ### 优先级
 
 1. role defaults
