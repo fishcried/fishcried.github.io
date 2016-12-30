@@ -42,7 +42,7 @@ tags: [openstack,ironic]
 - Conductor service
   实现核心功能,是API后端实现.与API通过进行RPC通信.
 - 消息队列
-- Database & DB api.
+- Database & DB API.
   存储
 - 用于部署的Ramdisk([diskimage-builder](https://github.com/openstack/diskimage-builder))
 
@@ -58,9 +58,9 @@ tags: [openstack,ironic]
 
 ![logical architecutre](/img/ironic_logical_architecture.png)
 
-用户通过nova api像启动一个实例,scheduler选举出合适的compute节点,然后该compute请求ironic api,真正的处理有ironic conductor来做.像neutron申请网络,到glance获取image,通过cinder获取volume,然后操作物理机.针对不同的屋里机,需要厂商提供ironic的driver.
+用户通过nova api像启动一个实例,scheduler选举出合适的compute节点,然后该compute请求ironic api,真正的处理由ironic conductor来做.向neutron申请网络,到glance获取image,通过cinder获取volume,然后操作物理机.针对不同的物理机,需要厂商提供ironic的driver.
 
-看到这个图的时候,我有几个疑问:
+看到这个图的时候,有几个疑问:
 
 1. Nova api启动实例,如何分辨是虚机还是物理机
 2. Scheduler如何调度nova compute节点,nova compute还能正常使用么?
