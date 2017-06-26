@@ -45,7 +45,6 @@ sig_hashalgo:   sha512
 让系统开机默认加载8201q模块
 
 ```
-# echo "modprobe 8021q" >  /etc/rc.local
 # echo "8021q" >> /etc/modules
 ```
 
@@ -68,6 +67,11 @@ vlan1000       | 1000  | eth4
 ```
 
 然后对vlan100和vlan200配置ip就可以了.
+
+```
+# ifconfig eth0 up
+# ifconfig eth0.100 ip1 netmask xxx.xxx.xxx.xxx
+```
 
 
 删除
