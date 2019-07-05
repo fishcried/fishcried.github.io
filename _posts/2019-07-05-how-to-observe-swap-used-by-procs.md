@@ -3,6 +3,7 @@ layout: post
 title: "如何查看swap如何被程序使用"
 description: ""
 category: 系统管理
+serial: 性能调优
 tags: []
 ---
 
