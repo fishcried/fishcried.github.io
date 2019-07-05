@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "如何查看swap如何被程序启动"
+title: "如何查看swap如何被程序使用"
 description: ""
 category: 系统管理
 tags: []
